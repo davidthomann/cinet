@@ -1,8 +1,12 @@
+import React from 'react'
+import { Button } from 'semantic-ui-react'
+
+
 function Index() {
 
   return (
     <>
-      <h1>Index</h1>
+
     </>
   )
 }
