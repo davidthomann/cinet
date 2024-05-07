@@ -4,8 +4,15 @@ import Drawer from '@mui/joy/Drawer';
 import Typography from '@mui/joy/Typography';
 import IconButton from '@mui/joy/IconButton';
 import Menu from '@mui/icons-material/Menu';
+import Home from '@mui/icons-material/Home';
+import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import DialogTitle from '@mui/joy/DialogTitle';
 import ModalClose from '@mui/joy/ModalClose';
+import List from '@mui/joy/List';
+import ListItem from '@mui/joy/ListItem';
+import ListItemDecorator from '@mui/joy/ListItemDecorator';
+import ListItemButton from '@mui/joy/ListItemButton';
+import ListItemContent from '@mui/joy/ListItemContent';
 
 import Box from '@mui/joy/Box';
 
@@ -25,6 +32,29 @@ function Header(props){
             <Drawer open={open} onClose={() => setOpen(false)}>
                 <ModalClose />
                 <DialogTitle>Title</DialogTitle>
+
+                <List>
+                    {/* Home Button */}
+                    <ListItem>
+                        <ListItemButton>
+                            <ListItemDecorator>
+                                <Home />
+                            </ListItemDecorator>
+                            <ListItemContent>Home</ListItemContent>
+                            <KeyboardArrowRight />
+                        </ListItemButton>
+                    </ListItem>
+                    {/* ... Button */}
+                    <ListItem>
+                        <ListItemButton>
+                            <ListItemDecorator>
+                                <Home />
+                            </ListItemDecorator>
+                            <ListItemContent>...</ListItemContent>
+                            <KeyboardArrowRight />
+                        </ListItemButton>
+                    </ListItem>
+                </List>
             </Drawer>
         </>
     )
