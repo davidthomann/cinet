@@ -1,4 +1,4 @@
-import React from 'react'
+import PropTypes from 'prop-types';
 import Box from '@mui/joy/Box';
 import Typography from '@mui/joy/Typography';
 
@@ -11,17 +11,20 @@ function PointScore(props) {
                 border: '2px solid grey',
                 textAlign: 'center',
                 marginX: 'auto',
-                marginTop: 4,
-                marginBottom: 4,
                 maxWidth: 325
             }}>
-                <Typography level="h3">{props.first_text}</Typography>
+                <Typography level="h3">{props.firstText}</Typography>
                 <Typography level="h1">{props.pointscore}</Typography>
-                <Typography level="h3">{props.second_text}</Typography>
+                <Typography level="h3">Punkte</Typography>
             </Box>
         </>
     )
 }
+
+PointScore.propTypes = {
+    firstText: PropTypes.string.isRequired,
+    pointscore: PropTypes.number.isRequired,
+};
 
 export default PointScore
 
