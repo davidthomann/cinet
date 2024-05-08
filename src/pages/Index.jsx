@@ -1,14 +1,12 @@
-import React from 'react'
-import { Button } from 'semantic-ui-react'
-
+import Header from '../components/Header'
 
 function Index() {
 
-  return (
-    <>
-
-    </>
-  )
+    return (
+        <>
+            <Header title="Home"/>
+        </>
+    )
 }
 
-export default Index
+export default Index;

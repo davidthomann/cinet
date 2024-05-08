@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Drawer from '@mui/joy/Drawer';
 import Typography from '@mui/joy/Typography';
 import IconButton from '@mui/joy/IconButton';
 import Menu from '@mui/icons-material/Menu';
 import Home from '@mui/icons-material/Home';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import DialogTitle from '@mui/joy/DialogTitle';
 import ModalClose from '@mui/joy/ModalClose';
@@ -13,6 +14,7 @@ import ListItem from '@mui/joy/ListItem';
 import ListItemDecorator from '@mui/joy/ListItemDecorator';
 import ListItemButton from '@mui/joy/ListItemButton';
 import ListItemContent from '@mui/joy/ListItemContent';
+import { Link } from 'react-router-dom';
 
 import Box from '@mui/joy/Box';
 
@@ -31,12 +33,12 @@ function Header(props){
 
             <Drawer open={open} onClose={() => setOpen(false)}>
                 <ModalClose />
-                <DialogTitle>Title</DialogTitle>
+                <DialogTitle>Navigation</DialogTitle>
 
                 <List>
                     {/* Home Button */}
                     <ListItem>
-                        <ListItemButton>
+                        <ListItemButton component={Link} to="/">
                             <ListItemDecorator>
                                 <Home />
                             </ListItemDecorator>
@@ -44,13 +46,13 @@ function Header(props){
                             <KeyboardArrowRight />
                         </ListItemButton>
                     </ListItem>
-                    {/* ... Button */}
+                    {/* Map Button */}
                     <ListItem>
-                        <ListItemButton>
+                        <ListItemButton component={Link} to="/map">
                             <ListItemDecorator>
-                                <Home />
+                                <LocationOnIcon />
                             </ListItemDecorator>
-                            <ListItemContent>...</ListItemContent>
+                            <ListItemContent>Map</ListItemContent>
                             <KeyboardArrowRight />
                         </ListItemButton>
                     </ListItem>
