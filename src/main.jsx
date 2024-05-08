@@ -1,10 +1,11 @@
 import ReactDOM from "react-dom/client";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import Index from "./pages/Index.jsx";
 import Map from "./pages/Map.jsx";
 import PointShop from "./pages/PointShop.jsx";
 import Games from "./pages/Games.jsx";
 import 'semantic-ui-css/semantic.min.css'
+import NotFound from "./pages/NotFound.jsx";
 
 export default function App() {
     return (
@@ -14,6 +15,9 @@ export default function App() {
                 <Route path="/map" element={<Map/>}/>
                 <Route path="/points" element={<PointShop/>}/>
                 <Route path="/games" element={<Games/>}/>
+
+                <Route path="*" element={<Navigate to="/404" />} />
+                <Route path="/404" element={<NotFound />} />
             </Routes>
         </BrowserRouter>
     );
