@@ -5,7 +5,9 @@ import Typography from '@mui/joy/Typography';
 import IconButton from '@mui/joy/IconButton';
 import Menu from '@mui/icons-material/Menu';
 import Home from '@mui/icons-material/Home';
+import StorefrontIcon from '@mui/icons-material/Storefront';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import DialogTitle from '@mui/joy/DialogTitle';
 import ModalClose from '@mui/joy/ModalClose';
@@ -43,6 +45,26 @@ function Header(props){
                                 <Home />
                             </ListItemDecorator>
                             <ListItemContent>Home</ListItemContent>
+                            <KeyboardArrowRight />
+                        </ListItemButton>
+                    </ListItem>
+                    {/* Map Button */}
+                    <ListItem>
+                        <ListItemButton component={Link} to="/games">
+                            <ListItemDecorator>
+                                <SportsEsportsIcon />
+                            </ListItemDecorator>
+                            <ListItemContent>Games</ListItemContent>
+                            <KeyboardArrowRight />
+                        </ListItemButton>
+                    </ListItem>
+                    {/* Map Button */}
+                    <ListItem>
+                        <ListItemButton component={Link} to="/points">
+                            <ListItemDecorator>
+                                <StorefrontIcon />
+                            </ListItemDecorator>
+                            <ListItemContent>Punkte einlösen</ListItemContent>
                             <KeyboardArrowRight />
                         </ListItemButton>
                     </ListItem>

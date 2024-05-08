@@ -1,9 +1,7 @@
-import React from 'react'
+import PropTypes from 'prop-types';
 import Box from '@mui/joy/Box';
-import Typography from '@mui/joy/Typography';
 
 function GamePreview(props) {
-
     return (
         <>
 
@@ -12,19 +10,21 @@ function GamePreview(props) {
                 border: '2px solid grey',
                 textAlign: 'center',
                 marginX: 'auto',
-                marginTop: 4,
-                marginBottom: 4,
                 maxWidth: 325,
                 backgroundImage: `url(${props.imageURL})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                color: 'white',
                 height: 132
             }}>
             </Box>
         </>
     )
 }
+
+GamePreview.propTypes = {
+    imageURL: PropTypes.string.isRequired,
+    linkURL: PropTypes.string.isRequired,
+};
 
 export default GamePreview
 
