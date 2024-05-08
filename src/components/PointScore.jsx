@@ -1,4 +1,3 @@
-import React from 'react'
 import PropTypes from 'prop-types';
 import Box from '@mui/joy/Box';
 import Typography from '@mui/joy/Typography';
@@ -12,8 +11,6 @@ function PointScore(props) {
                 border: '2px solid grey',
                 textAlign: 'center',
                 marginX: 'auto',
-                marginTop: 4,
-                marginBottom: 4,
                 maxWidth: 325
             }}>
                 <Typography level="h3">{props.firstText}</Typography>
