@@ -1,5 +1,5 @@
 import Header from '../components/Header';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/joy/Grid';
 import PointScore from '../components/PointScore';
 
 const ShopItems = [
@@ -19,10 +19,9 @@ const ShopItems = [
         name: "Snack",
         price: 150,
     },
-]
+];
 
 function PointShop() {
-    
     return (
         <>
             <Header title="Punkte einlösen"/>
@@ -31,9 +30,9 @@ function PointShop() {
                 margin: "auto",
             }}>
                 {ShopItems.map((item, index) => {
-                    return(
+                    return (
                         <Grid item xs={12} md={6} key={index} marginTop={3}>
-                            <PointScore pointscore={item.price} firstText={item.name} />
+                            <PointScore pointScore={item.price} firstText={item.name}/>
                         </Grid>
                     )
                 })}

@@ -3,7 +3,6 @@ import Box from '@mui/joy/Box';
 import Typography from '@mui/joy/Typography';
 
 function PointScore(props) {
-
     return (
         <>
             <Box component="section" sx={{
@@ -14,19 +13,19 @@ function PointScore(props) {
                 maxWidth: 325
             }}>
                 <Typography level="h3">{props.firstText}</Typography>
-                <Typography level="h1">{props.pointscore}</Typography>
+                <Typography level="h1">{props.pointScore}</Typography>
                 <Typography level="h3">Punkte</Typography>
             </Box>
         </>
-    )
+    );
 }
 
 PointScore.propTypes = {
     firstText: PropTypes.string.isRequired,
-    pointscore: PropTypes.number.isRequired,
+    pointScore: PropTypes.number.isRequired,
 };
 
-export default PointScore
+export default PointScore;
 
 
 

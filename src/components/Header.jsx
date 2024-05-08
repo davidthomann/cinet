@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+import {useState} from 'react';
 import Drawer from '@mui/joy/Drawer';
 import Typography from '@mui/joy/Typography';
 import IconButton from '@mui/joy/IconButton';
@@ -18,25 +18,25 @@ import ListItemButton from '@mui/joy/ListItemButton';
 import ListItemContent from '@mui/joy/ListItemContent';
 import Avatar from '@mui/joy/Avatar';
 import Divider from '@mui/joy/Divider';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 import Box from '@mui/joy/Box';
 
-function Header(props){
+function Header(props) {
     const [open, setOpen] = useState(false);
 
-    return(
+    return (
         <>
             <Box display="flex" alignItems="center" justifyContent="space-between" padding="1rem">
                 <IconButton variant="plain" color="neutral" onClick={() => setOpen(true)}>
-                    <Menu />
+                    <Menu/>
                 </IconButton>
                 <Typography level="h1">{props.title}</Typography>
                 <IconButton disabled></IconButton>
             </Box>
 
             <Drawer open={open} onClose={() => setOpen(false)}>
-                <ModalClose />
+                <ModalClose/>
                 <DialogTitle>Navigation</DialogTitle>
 
                 <List>
@@ -44,51 +44,51 @@ function Header(props){
                     <ListItem>
                         <ListItemButton component={Link} to="/">
                             <ListItemDecorator>
-                                <Home />
+                                <Home/>
                             </ListItemDecorator>
                             <ListItemContent>Home</ListItemContent>
-                            <KeyboardArrowRight />
+                            <KeyboardArrowRight/>
                         </ListItemButton>
                     </ListItem>
                     {/* Map Button */}
                     <ListItem>
                         <ListItemButton component={Link} to="/games">
                             <ListItemDecorator>
-                                <SportsEsportsIcon />
+                                <SportsEsportsIcon/>
                             </ListItemDecorator>
                             <ListItemContent>Games</ListItemContent>
-                            <KeyboardArrowRight />
+                            <KeyboardArrowRight/>
                         </ListItemButton>
                     </ListItem>
                     {/* Map Button */}
                     <ListItem>
                         <ListItemButton component={Link} to="/points">
                             <ListItemDecorator>
-                                <StorefrontIcon />
+                                <StorefrontIcon/>
                             </ListItemDecorator>
                             <ListItemContent>Punkte einlösen</ListItemContent>
-                            <KeyboardArrowRight />
+                            <KeyboardArrowRight/>
                         </ListItemButton>
                     </ListItem>
                     {/* Map Button */}
                     <ListItem>
                         <ListItemButton component={Link} to="/map">
                             <ListItemDecorator>
-                                <LocationOnIcon />
+                                <LocationOnIcon/>
                             </ListItemDecorator>
                             <ListItemContent>Map</ListItemContent>
-                            <KeyboardArrowRight />
+                            <KeyboardArrowRight/>
                         </ListItemButton>
                     </ListItem>
                 </List>
 
-                <Divider />
+                <Divider/>
                 <Box p={1}>
                     <Avatar>MD</Avatar>
                 </Box>
             </Drawer>
         </>
-    )
+    );
 }
 
 Header.propTypes = {

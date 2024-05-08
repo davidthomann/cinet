@@ -4,7 +4,6 @@ import Box from '@mui/joy/Box';
 function GamePreview(props) {
     return (
         <>
-
             <Box component="section" sx={{
                 p: 2,
                 border: '2px solid grey',
@@ -18,7 +17,7 @@ function GamePreview(props) {
             }}>
             </Box>
         </>
-    )
+    );
 }
 
 GamePreview.propTypes = {
@@ -26,7 +25,7 @@ GamePreview.propTypes = {
     linkURL: PropTypes.string.isRequired,
 };
 
-export default GamePreview
+export default GamePreview;
 
 
 

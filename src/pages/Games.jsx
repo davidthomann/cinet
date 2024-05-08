@@ -1,6 +1,6 @@
-import Header from '../components/Header'
-import Grid from '@mui/material/Grid';
-import GamePreview from '../components/GamePreview'
+import Header from '../components/Header';
+import Grid from '@mui/joy/Grid';
+import GamePreview from '../components/GamePreview';
 
 const games = [
     {
@@ -11,7 +11,7 @@ const games = [
         imageURL: "https://www.coolmathgames.com/sites/default/files/Snake_OG-logo.jpg",
         linkURL: "",
     },
-]
+];
 
 function Games() {
     return (
@@ -22,15 +22,15 @@ function Games() {
                 margin: "auto",
             }}>
                 {games.map((item, index) => {
-                    return(
+                    return (
                         <Grid item xs={12} md={6} key={index} marginTop={3}>
-                            <GamePreview imageURL={item.imageURL} linkURL={item.linkURL} />
+                            <GamePreview imageURL={item.imageURL} linkURL={item.linkURL}/>
                         </Grid>
                     )
                 })}
             </Grid>
         </>
-    )
+    );
 }
 
 export default Games;
