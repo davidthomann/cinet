@@ -16,6 +16,8 @@ import ListItem from '@mui/joy/ListItem';
 import ListItemDecorator from '@mui/joy/ListItemDecorator';
 import ListItemButton from '@mui/joy/ListItemButton';
 import ListItemContent from '@mui/joy/ListItemContent';
+import Avatar from '@mui/joy/Avatar';
+import Divider from '@mui/joy/Divider';
 import { Link } from 'react-router-dom';
 
 import Box from '@mui/joy/Box';
@@ -79,6 +81,11 @@ function Header(props){
                         </ListItemButton>
                     </ListItem>
                 </List>
+
+                <Divider />
+                <Box p={1}>
+                    <Avatar>MD</Avatar>
+                </Box>
             </Drawer>
         </>
     )
