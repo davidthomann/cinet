@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import {useState} from 'react';
+import {useContext, useState} from 'react';
 import Drawer from '@mui/joy/Drawer';
 import Typography from '@mui/joy/Typography';
 import IconButton from '@mui/joy/IconButton';
@@ -21,8 +21,10 @@ import Divider from '@mui/joy/Divider';
 import {Link} from 'react-router-dom';
 
 import Box from '@mui/joy/Box';
+import Context from "../Context.js";
 
 function Header(props) {
+    const { user } = useContext(Context);
     const [open, setOpen] = useState(false);
 
     return (
@@ -82,10 +84,18 @@ function Header(props) {
                     </ListItem>
                 </List>
 
+
                 <Divider/>
-                <Box p={1}>
-                    <Avatar>MD</Avatar>
-                </Box>
+                {user ?(
+                    <Box p={1}>
+                        <Avatar>{ user }</Avatar>
+                    </Box>
+                ) : (
+                    <Box p={1} display="flex" flexDirection="column">
+                        <Link to={"/auth/login"}>Login</Link>
+                        <Link to={"/auth/registration"}>Registrieren</Link>
+                    </Box>
+                )}
             </Drawer>
         </>
     );
