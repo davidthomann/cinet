@@ -88,7 +88,7 @@ function Header(props) {
                 <Divider/>
                 {user ?(
                     <Box p={1}>
-                        <Avatar>{ user }</Avatar>
+                        <Avatar>{ user.firstname.charAt(0) + user.lastname.charAt(0) }</Avatar>
                     </Box>
                 ) : (
                     <Box p={1} display="flex" flexDirection="column">
