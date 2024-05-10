@@ -2,16 +2,7 @@ import Header from '../components/Header';
 import Grid from '@mui/joy/Grid';
 import GamePreview from '../components/GamePreview';
 
-const games = [
-    {
-        imageURL: "https://static.spiels.ch/2/113722/96298/1200x630/flappybird-og.webp",
-        linkURL: "",
-    },
-    {
-        imageURL: "https://www.coolmathgames.com/sites/default/files/Snake_OG-logo.jpg",
-        linkURL: "",
-    },
-];
+import games from '../json/games.json';
 
 function Games() {
     return (
@@ -23,7 +14,7 @@ function Games() {
             }}>
                 {games.map((item, index) => {
                     return (
-                        <Grid item xs={12} md={6} key={index} marginTop={3}>
+                        <Grid item="true" xs={12} md={6} key={index} marginTop={3}>
                             <GamePreview imageURL={item.imageURL} linkURL={item.linkURL}/>
                         </Grid>
                     )

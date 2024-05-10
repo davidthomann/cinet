@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Popcorn Gutschein",
+    "price": 100
+  },
+  {
+    "name": "Kino Gutschein",
+    "price": 500
+  },
+  {
+    "name": "Getränk",
+    "price": 70
+  },
+  {
+    "name": "Snack",
+    "price": 150
+  }
+]

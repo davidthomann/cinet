@@ -2,24 +2,7 @@ import Header from '../components/Header';
 import Grid from '@mui/joy/Grid';
 import PointScore from '../components/PointScore';
 
-const ShopItems = [
-    {
-        name: "Popcorn Gutschein",
-        price: 100,
-    },
-    {
-        name: "Kino Gutschein",
-        price: 500,
-    },
-    {
-        name: "Getränk",
-        price: 70,
-    },
-    {
-        name: "Snack",
-        price: 150,
-    },
-];
+import ShopItems from '../json/shopItems.json';
 
 function PointShop() {
     return (
@@ -31,7 +14,7 @@ function PointShop() {
             }}>
                 {ShopItems.map((item, index) => {
                     return (
-                        <Grid item xs={12} md={6} key={index} marginTop={3}>
+                        <Grid item="true" xs={12} md={6} key={index} marginTop={3}>
                             <PointScore pointScore={item.price} firstText={item.name}/>
                         </Grid>
                     )
