@@ -9,8 +9,6 @@ function InputField(props) {
                 <form
                     onSubmit={(event) => {
                         event.preventDefault();
-                        const formData = new FormData(event.currentTarget);
-                        const formJson = Object.fromEntries((formData).entries());
                     // TODO: Add Direction to Home Page
                     }}
                 >
@@ -21,7 +19,7 @@ function InputField(props) {
                         }}>
                             {props.labelName}
                         </FormLabel>
-                        <Input style={{border: '1.4px solid #2f3237', borderRadius: '0'}}
+                        <Input type={props.type} style={{border: '1.4px solid #2f3237', borderRadius: '0'}}
                                color="#2f3237"
                                placeholder={props.placeholderText}
                                size="sm"
@@ -37,6 +35,7 @@ function InputField(props) {
 InputField.propTypes = {
     labelName: PropTypes.string.isRequired,
     placeholderText: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired
 };
 
 export default InputField
