@@ -10,7 +10,7 @@ function SubmitButton(props) {
                     fontWeight: 'bold',
                     marginTop: '8px',
                     marginLeft: '4.5%',
-                    marginRight: '4.5%'
+                    marginRight: '4.5%',
                 }}>{props.text}</Button>
             </div>
         </>
