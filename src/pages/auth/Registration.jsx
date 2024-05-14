@@ -34,7 +34,7 @@ function Registration() {
                     <InputField labelName="Nachname" placeholderText="Doe" type=""/>
                     <InputField labelName="E-Mail" placeholderText="john.doe@gmail.com" type=""/>
                     <InputField labelName="Passwort" placeholderText="Passwort" type="password"/>
-                    <InputField labelName="Geburtstag" placeholderText="" type="date"/>
+                    <InputField labelName="Geburtstag" placeholderText="Geburtstag" type="date"/>
                     <br/>
                     <SubmitButton text="Registrieren">Submit</SubmitButton>
                 </Stack>

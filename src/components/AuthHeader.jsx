@@ -1,12 +1,15 @@
 import Box from '@mui/joy/Box';
 import Typography from '@mui/joy/Typography';
 import PropTypes from 'prop-types';
+import {Link} from "react-router-dom";
 
 function AuthHeader(props) {
     return (
         <>
             <Box display="flex" flexDirection="column" alignItems="center" padding="3rem">
+                <Link to="/">
                 <img src="/svg/logo.svg" style={{width: '12rem'}} alt="Logo picture"></img>
+                </Link>
                 <Typography sx={{
                     fontSize: "2rem",
                     fontWeight: 600,
