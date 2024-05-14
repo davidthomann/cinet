@@ -4,6 +4,7 @@ import InputField from "../../components/InputField.jsx";
 import SubmitButton from "../../components/SubmitButton.jsx";
 import {useContext} from "react";
 import Context from "../../Context.js";
+import {Link} from "react-router-dom";
 
 function Login() {
     const setUser = useContext(Context)
@@ -29,7 +30,7 @@ function Login() {
                     <InputField labelName="Passwort" placeholderText="Passwort" type="password"/>
                     <SubmitButton text="Einloggen"></SubmitButton>
                     <br/>
-                    <SubmitButton text="zurück..."></SubmitButton>
+                    <Link to="/"><SubmitButton text="zurück..."></SubmitButton></Link>
                 </Stack>
             </form>
         </>
