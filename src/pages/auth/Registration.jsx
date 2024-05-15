@@ -4,7 +4,6 @@ import SubmitButton from "../../components/SubmitButton.jsx"
 import InputField from "../../components/InputField.jsx";
 import {useContext} from "react";
 import Context from "../../Context.js";
-import {Link} from "react-router-dom";
 
 function Registration() {
     const {setUser} = useContext(Context);
@@ -37,7 +36,6 @@ function Registration() {
                     <br/>
                     <SubmitButton text="Registrieren"></SubmitButton>
                     <br/>
-                    <Link to="/"><SubmitButton text="zurück..."></SubmitButton></Link>
                 </Stack>
             </form>
             <br/>
