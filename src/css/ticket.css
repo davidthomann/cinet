@@ -1,0 +1,32 @@
+.ticket-wrapper {
+    background: linear-gradient(90deg, #5B8C8C 0%, #435E5E 100%);
+    cursor: pointer;
+}
+
+.ticket-box {
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: 90% center;
+}
+
+.ticket-wrapper:after,
+.ticket-wrapper:before {
+    content: "";
+    background-color: white;
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
+    border-radius: 50%;
+
+    top: 50%;
+}
+
+.ticket-wrapper:before {
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.ticket-wrapper:after {
+    left: 100%;
+    transform: translate(-50%, -50%);
+}
