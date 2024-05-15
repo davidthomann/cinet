@@ -3,6 +3,7 @@ import Grid from '@mui/joy/Grid';
 import PointScore from '../components/PointScore';
 
 import ShopItems from '../json/shopItems.json';
+import Ticket from "../components/Ticket.jsx";
 
 function PointShop() {
     return (
@@ -15,7 +16,7 @@ function PointShop() {
                 {ShopItems.map((item, index) => {
                     return (
                         <Grid item="true" xs={12} md={6} key={index} marginTop={3}>
-                            <PointScore pointScore={item.price} firstText={item.name}/>
+                            <Ticket pointScore={item.price} firstText={item.name} svgURL={item.svgURL}/>
                         </Grid>
                     )
                 })}
