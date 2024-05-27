@@ -6,12 +6,6 @@ function InputField(props) {
     return (
         <>
             <div style={{marginLeft: '4.5%', marginRight: '4.5%'}}>
-                <form
-                    onSubmit={(event) => {
-                        event.preventDefault();
-                    // TODO: Add Direction to Home Page
-                    }}
-                >
                     <FormControl>
                         <FormLabel sx={{
                             fontSize: '13px',
@@ -24,9 +18,10 @@ function InputField(props) {
                                placeholder={props.placeholderText}
                                size="sm"
                                variant="outlined"
+                               name={props.name}
+                               required
                         />
                     </FormControl>
-                </form>
             </div>
         </>
     );
@@ -35,7 +30,8 @@ function InputField(props) {
 InputField.propTypes = {
     labelName: PropTypes.string.isRequired,
     placeholderText: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired
+    type: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired
 };
 
 export default InputField
