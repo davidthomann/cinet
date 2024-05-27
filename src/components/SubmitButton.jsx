@@ -5,7 +5,7 @@ function SubmitButton(props) {
     return (
         <>
             <div>
-                <Button style={{}} sx={{
+                <Button type="submit" sx={{
                     backgroundColor: '#2f3237',
                     fontWeight: 'bold',
                     marginTop: '8px',
