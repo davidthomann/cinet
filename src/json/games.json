@@ -1,10 +1,22 @@
 [
   {
-    "imageURL": "https://static.spiels.ch/2/113722/96298/1200x630/flappybird-og.webp",
-    "linkURL": ""
+    "id": 0,
+    "name": "Flappy Bird",
+    "imageURL": "https://static.spiels.ch/2/113722/96298/1200x630/flappybird-og.webp"
   },
   {
-    "imageURL": "https://www.coolmathgames.com/sites/default/files/Snake_OG-logo.jpg",
-    "linkURL": ""
+    "id": 1,
+    "name": "Snake",
+    "imageURL": "https://www.coolmathgames.com/sites/default/files/Snake_OG-logo.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Tetris",
+    "imageURL": "https://www.hollywoodreporter.com/wp-content/uploads/2014/09/tatris_a_l.jpg?w=3000"
+  },
+  {
+    "id": 3,
+    "name": "PAC-MAN",
+    "imageURL": "https://i.guim.co.uk/img/media/8152f8ea7f06fd8ef5c68a3a594e6ac35dfd774b/0_342_800_480/master/800.jpg?width=1200&quality=85&auto=format&fit=max&s=493e9743702c9babc482709c2a66c8ab"
   }
 ]

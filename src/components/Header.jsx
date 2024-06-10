@@ -22,6 +22,7 @@ import {Link} from 'react-router-dom';
 
 import Box from '@mui/joy/Box';
 import Context from "../Context.js";
+import index from "../pages/Index.jsx";
 
 function Header(props) {
     const { user } = useContext(Context);
@@ -29,8 +30,25 @@ function Header(props) {
 
     return (
         <>
-            <Box display="flex" alignItems="center" justifyContent="space-between" padding="1rem">
-                <IconButton variant="plain" color="neutral" onClick={() => setOpen(true)}>
+            <Box  sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                padding: "1rem",
+                ...(props.title === "" && {
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    zIndex: 20,
+                }),
+                }} >
+                <IconButton variant="plain" color="neutral" sx={{
+                    ...(props.title === "" && {
+                        '&:hover': {
+                            backgroundColor: 'rgb(41,46,50)',
+                        },
+                    })
+                }} onClick={() => setOpen(true)}>
                     <Menu/>
                 </IconButton>
                 <Typography level="h1">{props.title}</Typography>
@@ -88,7 +106,14 @@ function Header(props) {
                 <Divider/>
                 {user ?(
                     <Box p={1}>
-                        <Avatar>{ user.firstname.charAt(0) + user.lastname.charAt(0) }</Avatar>
+                        <Link to="/auth/profile">
+                            <Box display="flex" alignItems="center">
+                                <Avatar>{ user.firstname.charAt(0) + user.lastname.charAt(0) }</Avatar>
+                                <Typography sx={{
+                                    marginLeft: "1rem"
+                                }}>Profil</Typography>
+                            </Box>
+                        </Link>
                     </Box>
                 ) : (
                     <Box p={1} display="flex" flexDirection="column">

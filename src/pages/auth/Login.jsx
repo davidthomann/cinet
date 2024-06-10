@@ -7,9 +7,8 @@ import Context from "../../Context.js";
 import {useNavigate} from "react-router-dom";
 
 function Login() {
-    const {setUser} = useContext(Context);
+    const {setUser, setDialog } = useContext(Context);
     const navigate = useNavigate();
-    const [open, setOpen] = useState(false);
 
     const logIn = (event) => {
         event.preventDefault();
@@ -23,13 +22,17 @@ function Login() {
             email,
             password,
             birthday: "11-11-1111",
-            points: 0
+            points: 0,
+            coupons: []
         });
 
-        setOpen(true)
-        setTimeout(() => {
-            navigate('/')
-        }, 1000)
+        setDialog(oldDialog => ({
+            ...oldDialog,
+            open: true,
+            msg: "Du wurdest erfolgreich angemeldet.",
+            color: "success"
+        }));
+        navigate('/')
     }
 
 
@@ -42,15 +45,8 @@ function Login() {
                     <InputField labelName="E-Mail" placeholderText="john.doe@gmail.com" type="email" name="email"/>
                     <InputField labelName="Passwort" placeholderText="Passwort" type="password" name="password"/>
                     <SubmitButton text="Login"></SubmitButton>
-                    <br/>
                 </Stack>
             </form>
-            <Snackbar
-                open={open}
-                color="success"
-            >
-                Anmeldung Erfolgreich
-            </Snackbar>
         </>
     );
 }

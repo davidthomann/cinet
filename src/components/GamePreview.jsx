@@ -1,21 +1,23 @@
 import PropTypes from 'prop-types';
 import Box from '@mui/joy/Box';
+import {Link} from "react-router-dom";
 
 function GamePreview(props) {
     return (
         <>
-            <Box component="section" sx={{
-                p: 2,
-                border: '2px solid grey',
-                textAlign: 'center',
-                marginX: 'auto',
-                maxWidth: 325,
-                backgroundImage: `url(${props.imageURL})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                height: 132
-            }}>
-            </Box>
+            <Link to={props.linkURL}>
+                <Box component="section" sx={{
+                    p: 2,
+                    textAlign: 'center',
+                    marginX: 'auto',
+                    maxWidth: 325,
+                    backgroundImage: `url(${props.imageURL})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    height: 132
+                }}>
+                </Box>
+            </Link>
         </>
     );
 }
