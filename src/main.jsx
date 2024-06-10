@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom/client";
-import {BrowserRouter, Navigate, Route, Routes, useNavigate} from "react-router-dom";
+import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import Index from "./pages/Index.jsx";
 import Map from "./pages/Map.jsx";
 import PointShop from "./pages/PointShop.jsx";
@@ -27,10 +27,10 @@ export default function App() {
 
     const PrivateRoute = (props) => {
         const a = props.type === "public"
-        if(( user && !a ) || ( !user && a )){
-            return(props.element)
+        if ((user && !a) || (!user && a)) {
+            return (props.element)
         }
-        return <Navigate to="/notauth" />
+        return <Navigate to="/notauth"/>
     }
 
     return (
@@ -45,24 +45,24 @@ export default function App() {
                             <Route path="/notauth" element={<NotAuthScreen/>}/>
 
                             <Route path="/points" element={
-                                <PrivateRoute element={<PointShop/>} type="private" />}
+                                <PrivateRoute element={<PointShop/>} type="private"/>}
                             />
 
                             <Route path="/auth/login" element={
-                                <PrivateRoute element={<Login/>} type="public" />}
+                                <PrivateRoute element={<Login/>} type="public"/>}
                             />
                             <Route path="/auth/registration" element={
-                                <PrivateRoute element={<Registration/>} type="public" />}
+                                <PrivateRoute element={<Registration/>} type="public"/>}
                             />
                             <Route path="/auth/profile" element={
-                                <PrivateRoute element={<Profile/>} type="private" />}
+                                <PrivateRoute element={<Profile/>} type="private"/>}
                             />
                             <Route path="/game/:id" element={
-                                <PrivateRoute element={<Game/>} type="private" />}
+                                <PrivateRoute element={<Game/>} type="private"/>}
                             />
 
-                            <Route path="*" element={<Navigate to="/404" />} />
-                            <Route path="/404" element={<NotFound />} />
+                            <Route path="*" element={<Navigate to="/404"/>}/>
+                            <Route path="/404" element={<NotFound/>}/>
                         </Routes>
                     </Context.Provider>
                 </BrowserRouter>

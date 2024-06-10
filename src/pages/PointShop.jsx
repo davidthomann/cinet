@@ -1,17 +1,16 @@
 import Header from '../components/Header';
 import Grid from '@mui/joy/Grid';
-import PointScore from '../components/PointScore';
 
 import ShopItems from '../json/shopItems.json';
 import Ticket from "../components/Ticket.jsx";
-import {useContext, useEffect} from "react";
+import {useContext} from "react";
 import Context from "../Context.js";
 
 function PointShop() {
-    const { user, setUser, setDialog } = useContext(Context);
+    const {user, setUser, setDialog} = useContext(Context);
 
-    function buy(article){
-        if(article.price > user.points){
+    function buy(article) {
+        if (article.price > user.points) {
             return setDialog(oldDialog => ({
                 ...oldDialog,
                 open: true,

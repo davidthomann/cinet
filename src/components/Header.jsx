@@ -22,15 +22,14 @@ import {Link} from 'react-router-dom';
 
 import Box from '@mui/joy/Box';
 import Context from "../Context.js";
-import index from "../pages/Index.jsx";
 
 function Header(props) {
-    const { user } = useContext(Context);
+    const {user} = useContext(Context);
     const [open, setOpen] = useState(false);
 
     return (
         <>
-            <Box  sx={{
+            <Box sx={{
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
@@ -41,7 +40,7 @@ function Header(props) {
                     left: 0,
                     zIndex: 20,
                 }),
-                }} >
+            }}>
                 <IconButton variant="plain" color="neutral" sx={{
                     ...(props.title === "" && {
                         '&:hover': {
@@ -104,11 +103,11 @@ function Header(props) {
 
 
                 <Divider/>
-                {user ?(
+                {user ? (
                     <Box p={1}>
                         <Link to="/auth/profile">
                             <Box display="flex" alignItems="center">
-                                <Avatar>{ user.firstname.charAt(0) + user.lastname.charAt(0) }</Avatar>
+                                <Avatar>{user.firstname.charAt(0) + user.lastname.charAt(0)}</Avatar>
                                 <Typography sx={{
                                     marginLeft: "1rem"
                                 }}>Profil</Typography>

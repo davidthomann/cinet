@@ -6,9 +6,8 @@ import InputField from "../../components/InputField.jsx";
 import Avatar from "@mui/joy/Avatar";
 import Box from "@mui/joy/Box";
 import Typography from "@mui/joy/Typography";
-import games from "../../json/games.json";
 import Grid from "@mui/joy/Grid";
-import GamePreview from "../../components/GamePreview.jsx";
+
 
 import ShopItems from '../../json/shopItems.json';
 
@@ -16,7 +15,7 @@ import ShopItems from '../../json/shopItems.json';
 function profile() {
     const {user} = useContext(Context);
 
-    return(
+    return (
         <>
             <Header title="Profil"/>
 
@@ -27,7 +26,7 @@ function profile() {
                     fontSize: "4rem",
                     margin: "2rem"
                 }}
-                >{ user.firstname.charAt(0) + user.lastname.charAt(0) }</Avatar>
+                >{user.firstname.charAt(0) + user.lastname.charAt(0)}</Avatar>
             </Box>
 
             <Typography level="h3">Deine Punkte:</Typography>
@@ -35,7 +34,7 @@ function profile() {
 
             <Typography level="h3">Deine Gutscheine:</Typography>
             <Box>
-                { user.coupons.length === 0 ? (
+                {user.coupons.length === 0 ? (
                     <Typography level="h4">Du hast noch keine Gutscheine.</Typography>
                 ) : (
                     <Grid container sx={{
@@ -44,7 +43,6 @@ function profile() {
                     }}>
                         {user.coupons.map((item, index) => {
                             const coupon = ShopItems.find(coupon => coupon.id === item);
-
                             if (!coupon) {
                                 return null;
                             }

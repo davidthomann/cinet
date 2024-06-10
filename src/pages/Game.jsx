@@ -9,14 +9,14 @@ import Context from "../Context.js";
 import Box from "@mui/joy/Box";
 
 const Game = () => {
-    const { user, setUser } = useContext(Context);
+    const {user, setUser} = useContext(Context);
 
-    const { id } = useParams();
-    const { name, imageURL } = games.filter(game => game.id === Number(id))[0]
-    const [ output, setOutput ] = useState("");
+    const {id} = useParams();
+    const {name, imageURL} = games.filter(game => game.id === Number(id))[0]
+    const [output, setOutput] = useState("");
 
-    function startGame(){
-        const randomPoint =  Math.floor(Math.random() * 100);
+    function startGame() {
+        const randomPoint = Math.floor(Math.random() * 100);
 
         setUser(oldUser => ({
             ...oldUser,
@@ -26,8 +26,8 @@ const Game = () => {
         setOutput(`Du hast ${randomPoint} Punkte gewonnen.`);
     }
 
-    if(!name){
-        return(
+    if (!name) {
+        return (
             <>
                 <Header title="Spiel nicht gefunden"/>
                 <Link to="/games">Zurück</Link>
@@ -35,7 +35,7 @@ const Game = () => {
         )
     }
 
-    return(
+    return (
         <>
             <Header title={name}/>
             <Box sx={{

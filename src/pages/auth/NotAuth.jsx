@@ -1,11 +1,11 @@
 import Typography from "@mui/joy/Typography";
 import Header from "../../components/Header.jsx";
-import {Button, extendTheme, ThemeProvider} from "@mui/joy";
+import {Button} from "@mui/joy";
 import Box from "@mui/joy/Box";
 import {Link} from "react-router-dom";
 
-function NotAuthScreen(){
-    return(
+function NotAuthScreen() {
+    return (
         <>
             <Header title="Nicht angemeldet"/>
             <img src="/undraw/notAuth.svg" style={{

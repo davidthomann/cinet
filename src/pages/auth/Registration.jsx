@@ -1,10 +1,10 @@
 import AuthHeader from '../../components/AuthHeader';
-import {Snackbar, Stack} from "@mui/joy";
+import {Stack} from "@mui/joy";
 import SubmitButton from "../../components/SubmitButton.jsx"
 import InputField from "../../components/InputField.jsx";
-import {useContext, useState} from "react";
+import {useContext} from "react";
 import Context from "../../Context.js";
-import { useNavigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 function Registration() {
     const {setUser, setDialog} = useContext(Context);

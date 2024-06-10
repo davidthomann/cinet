@@ -8,7 +8,7 @@ function AuthHeader(props) {
         <>
             <Box display="flex" flexDirection="column" alignItems="center" padding="3rem">
                 <Link to="/">
-                <img src="/svg/logo.svg" style={{width: '12rem'}} alt="Logo picture"></img>
+                    <img src="/svg/logo.svg" style={{width: '12rem'}} alt="Logo picture"></img>
                 </Link>
                 <Typography sx={{
                     fontSize: "2rem",

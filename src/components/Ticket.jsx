@@ -7,22 +7,22 @@ import Box from "@mui/joy/Box";
 
 const Ticket = (props) => {
 
-    return(
-            <Card component="article" className="ticket-wrapper" sx={{
-                marginX: 'auto',
-                maxWidth: 325,
-                maxHeight: 190,
+    return (
+        <Card component="article" className="ticket-wrapper" sx={{
+            marginX: 'auto',
+            maxWidth: 325,
+            maxHeight: 190,
+        }}>
+            <Box className="ticket-box" sx={{
+                backgroundImage: `url("${props.svgURL}")`
             }}>
-                <Box className="ticket-box" sx={{
-                    backgroundImage: `url("${props.svgURL}")`
-                }}>
-                    <Typography level="h1" sx={{color: "white",}}>{props.pointScore}</Typography>
-                    <Typography level="p" sx={{
-                        color: "white",
-                        marginTop: 7,
-                    }}>{props.firstText}</Typography>
-                </Box>
-            </Card>
+                <Typography level="h1" sx={{color: "white",}}>{props.pointScore}</Typography>
+                <Typography level="p" sx={{
+                    color: "white",
+                    marginTop: 7,
+                }}>{props.firstText}</Typography>
+            </Box>
+        </Card>
     )
 }
 
