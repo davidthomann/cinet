@@ -9,7 +9,7 @@ import Context from "../Context.js";
 import Box from "@mui/joy/Box";
 
 const Game = () => {
-    const { user, setUser } = useContext(Context);
+    const { user, setUser, setDialog } = useContext(Context);
 
     const { id } = useParams();
     const { name, imageURL } = games.filter(game => game.id === Number(id))[0]
@@ -20,10 +20,15 @@ const Game = () => {
 
         setUser(oldUser => ({
             ...oldUser,
-            points: oldUser.points + randomPoint,
+            points: oldUser.points + randomPoint
         }));
 
-        setOutput(`Du hast ${randomPoint} Punkte gewonnen.`);
+        setDialog(oldDialog => ({
+            ...oldDialog,
+            open: true,
+            msg: `Du hast ${randomPoint} gewonnen.`,
+            color: "success"
+        }));
     }
 
     if(!name){
@@ -49,7 +54,6 @@ const Game = () => {
                 <Button onClick={startGame} sx={{
                     marginTop: "2rem"
                 }}>Game spielen</Button>
-                <Typography level="p">{output}</Typography>
             </Box>
         </>
     )
