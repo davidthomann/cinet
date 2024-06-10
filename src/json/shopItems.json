@@ -1,20 +1,24 @@
 [
   {
+    "id": 1,
     "name": "Popcorn Gutschein",
     "price": 100,
     "svgURL": "/svg/popcorn.svg"
   },
   {
+    "id": 2,
     "name": "Kino Gutschein",
     "price": 500,
     "svgURL": "/svg/ticket.svg"
   },
   {
+    "id": 3,
     "name": "Getränke Gutschein",
     "price": 70,
     "svgURL": "/svg/drink.svg"
   },
   {
+    "id": 4,
     "name": "Snack Gutschein",
     "price": 150,
     "svgURL": "/svg/snack.svg"

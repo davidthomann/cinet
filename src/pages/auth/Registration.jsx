@@ -7,8 +7,7 @@ import Context from "../../Context.js";
 import { useNavigate } from 'react-router-dom';
 
 function Registration() {
-    const {setUser} = useContext(Context);
-    const [open, setOpen] = useState(false);
+    const {setUser, setDialog} = useContext(Context);
     const navigate = useNavigate();
 
 
@@ -25,13 +24,17 @@ function Registration() {
             email,
             password,
             birthday,
-            points: 0
+            points: 0,
+            coupons: []
         });
 
-        setOpen(true)
-        setTimeout(() => {
-            navigate('/')
-        }, 1000)
+        setDialog(oldDialog => ({
+            ...oldDialog,
+            open: true,
+            msg: "Du wurdest erfolgreich angemeldet.",
+            color: "success"
+        }));
+        navigate('/')
     }
 
     return (
@@ -51,13 +54,6 @@ function Registration() {
                     <br/>
                 </Stack>
             </form>
-            <Snackbar
-                open={open}
-                color="success"
-            >
-                Account wurde erstellt.
-            </Snackbar>
-            <br/>
         </>
     );
 }

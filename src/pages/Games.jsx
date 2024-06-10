@@ -15,7 +15,7 @@ function Games() {
                 {games.map((item, index) => {
                     return (
                         <Grid item="true" xs={12} md={6} key={index} marginTop={3}>
-                            <GamePreview imageURL={item.imageURL} linkURL={item.linkURL}/>
+                            <GamePreview imageURL={item.imageURL} linkURL={`/game/${item.id}`}/>
                         </Grid>
                     )
                 })}
